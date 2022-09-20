@@ -1,15 +1,29 @@
-li{
-    width: 30vw;
+.product-link{
+    text-decoration: none;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 1rem;
-    img{
-        width: 150px;
-    }
-    h1{
-        font-size: 18px;
+    color: #000;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    border-radius: 22px;
+    background-color: #fff;
+    .cart-product{
+        margin-top: 2rem;
+        width: 28vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        img{
+            width: 180px;
+            padding: 1rem;
+        }
+        h1{
+            font-size: 18px;
+            padding: 1rem;
+        }
     }
 }

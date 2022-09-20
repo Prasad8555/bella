@@ -263,7 +263,7 @@ const products = [
   }
 ]
 
-const updatedProducts = products.map(eachProduct => ({...eachProduct, isInCart: false, productCount: 0, isFavorites: false}))
+const updatedProducts = products.map(eachProduct => ({...eachProduct, isInCart: false, productCount: 0, isFavorite: false}))
 
 const initialState = {
     products: updatedProducts,
@@ -318,11 +318,14 @@ const productsSlice = createSlice({
       toggleFavorites: (state, action) => {
         const {productId} = action.payload
         const product = state.products.find(each => each.productId === productId)
-        product.isFavorites = !product.isFavorites
+        product.isFavorite = !product.isFavorite
+      },
+      resetProducts: (state) => {
+        state.products = updatedProducts
       }
     }
 })
 
-export const {addToCart, increaseCount, decreaseCount, toggleFavorites} = productsSlice.actions
+export const {addToCart, increaseCount, decreaseCount, toggleFavorites, resetProducts} = productsSlice.actions
 
 export default productsSlice.reducer

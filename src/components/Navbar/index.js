@@ -1,5 +1,6 @@
 import Logo from '../../images/bellaLogo.jpg'
 import {Link} from 'react-router-dom'
+import {RiShoppingBag3Line} from 'react-icons/ri'
 import './index.scss'
 
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
             </ul>
             <div>
                 <p>Profile</p>
-                <Link to="/cart" className='cart'>Cart</Link>
+                <Link to="/cart" className='cart'><RiShoppingBag3Line /></Link>
             </div>
         </nav>
     )

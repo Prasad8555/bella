@@ -2,11 +2,28 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    overflow-y: scroll;
-    margin-top: 120px;
-    img{
-        width: 200px;
+    .product-container{
+      margin-top: 100px;
+      display: flex;
+      img{
+        width: 30vw;
+        margin: 1rem;
     }
+    .detailes{
+      padding: 1rem;
+      h1{
+        font-size: 22px;
+        font-weight: 500;
+      }
+      p{
+        font-size: 14px;
+        pad: 1rem;
+        width: 50vw;
+      }
+    }
+    
+    }
+    
 
 }
 

@@ -9,7 +9,7 @@ const SpecificProduct = () => {
     const {id} = useParams()
     const {products} = useSelector((state) => state.products)
     const [product] = products.filter((eachProduct) => eachProduct.productId === id)
-    const {productId, imageURL, name, brandName, price, productCount} = product
+    const {productId, imageURL, name, brandName, price, productCount, isFavorite} = product
     const dispatch = useDispatch()
 
     const onClickToggleFavorite = () => {
@@ -24,16 +24,16 @@ const SpecificProduct = () => {
     return(
         <div className='product-item'>
             <Navbar />
-            <div>
+            <div className='product-container'>
                 <img src={imageURL} alt="specific-product" />
-                <div>
+                <div className='detailes'>
                     <p>{brandName}</p>
                     <h1>{name}</h1>
                     <p>You can buy amazing products like this on Hollister's website. Link on the licensing page. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action.</p>
                     <h1>{price}</h1>
                     <h1>{productCount}</h1>
                     <button type='button' onClick={onClickAddCart}>ADD TO CART</button>
-                    <button type="button" onClick={onClickToggleFavorite}>Add To Favorites</button>
+                    <button type="button" onClick={onClickToggleFavorite}>{isFavorite ? 'Remove From Favorites' : 'Add To Favorites'}</button>
                 </div>
             </div>
         </div>
