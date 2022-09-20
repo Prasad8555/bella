@@ -1,0 +1,15 @@
+li{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    img{
+        width: 150px;
+    }
+    h1{
+        font-size: 18px;
+    }
+}

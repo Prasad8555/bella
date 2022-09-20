@@ -1,0 +1,24 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    overflow: hidden;
+        
+    //     li{
+    //         font-size: 18px;
+    //         font-weight: 600;
+    //         color: rgb(19, 19, 19);
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         img{
+    //             width: 100px;
+    //         }
+    //     }
+    div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 15vw;
+    }
+}
