@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import Product from '../ProductItem'
 import Navbar from "../Navbar"
+import './index.scss'
 
 const Favorites = () => {
     const {products} = useSelector((state) => state.products)
@@ -10,7 +11,7 @@ const Favorites = () => {
     console.log(favoriteProductsLength)
 
     return(
-        <div>
+        <div className="favorites-bg-container">
             <Navbar />
             <h1>Favorites</h1>
             {favoriteProductsLength > 0 ? (<ul>{favoriteProducts.map((each) => <Product product={each} key={each.productId} />)}</ul>) : (<h1>No Favorites</h1>)}

@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart, toggleFavorites } from '../../features/productsSlice';
 import Navbar from '../Navbar/index'
+import './index.scss'
 
 
 const SpecificProduct = () => {
@@ -21,7 +22,7 @@ const SpecificProduct = () => {
 
 
     return(
-        <div>
+        <div className='product-item'>
             <Navbar />
             <div>
                 <img src={imageURL} alt="specific-product" />
